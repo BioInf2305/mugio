@@ -1740,7 +1740,7 @@ if args.breakpoint_retrieval_and_definition:
     for line in infile:
         line_ct += 1
         
-        if line[0] == '@':
+        if line[0] == '@' and line_ct!=3:
             uid = line.split('@')[1].split(' ')[0].strip()
             if uid in aligned_uid:
                 line_ct = 0
